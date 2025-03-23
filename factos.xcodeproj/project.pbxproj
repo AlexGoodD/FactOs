@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A94E5C0C2D8FA107007BFE7C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A94E5C0B2D8FA107007BFE7C /* FirebaseAnalytics */; };
+		A94E5C0E2D8FA107007BFE7C /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A94E5C0D2D8FA107007BFE7C /* FirebaseAnalyticsSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A96B4F892D8E281000F79AEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,30 @@
 		A96B4F922D8E281000F79AEB /* factosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = factosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A94E5C082D8FA044007BFE7C /* Exceptions for "factos" folder in "factosTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = A96B4F872D8E281000F79AEB /* factosTests */;
+		};
+		A94E5C092D8FA044007BFE7C /* Exceptions for "factos" folder in "factosUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = A96B4F912D8E281000F79AEB /* factosUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A96B4F7A2D8E280F00F79AEB /* factos */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A94E5C082D8FA044007BFE7C /* Exceptions for "factos" folder in "factosTests" target */,
+				A94E5C092D8FA044007BFE7C /* Exceptions for "factos" folder in "factosUITests" target */,
+			);
 			path = factos;
 			sourceTree = "<group>";
 		};
@@ -52,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94E5C0E2D8FA107007BFE7C /* FirebaseAnalyticsSwift in Frameworks */,
+				A94E5C0C2D8FA107007BFE7C /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +140,8 @@
 			);
 			name = factos;
 			packageProductDependencies = (
+				A94E5C0B2D8FA107007BFE7C /* FirebaseAnalytics */,
+				A94E5C0D2D8FA107007BFE7C /* FirebaseAnalyticsSwift */,
 			);
 			productName = factos;
 			productReference = A96B4F782D8E280F00F79AEB /* factos.app */;
@@ -195,6 +225,9 @@
 			);
 			mainGroup = A96B4F6F2D8E280F00F79AEB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A94E5C0A2D8FA107007BFE7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A96B4F792D8E280F00F79AEB /* Products */;
 			projectDirPath = "";
@@ -409,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrochavarb.factos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrochav.factos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -438,7 +471,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrochavarb.factos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrochav.factos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -558,6 +591,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A94E5C0A2D8FA107007BFE7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A94E5C0B2D8FA107007BFE7C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94E5C0A2D8FA107007BFE7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A94E5C0D2D8FA107007BFE7C /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A94E5C0A2D8FA107007BFE7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A96B4F702D8E280F00F79AEB /* Project object */;
 }

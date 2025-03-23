@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Factos App!")
-        }
-        .padding()
+        Text("Hola Firebase")
+            .onAppear {
+                Analytics.logEvent("pantalla_abierta", parameters: [
+                    "origen": "debug"
+                ])
+            }
     }
 }
 
