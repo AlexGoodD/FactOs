@@ -20,9 +20,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct factosApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if let user = authenticationViewModel.user {
+                Text("Bienvenido \(user.email)")
+            } else {
+                AuthenticationView(authenticationViewModel: authenticationViewModel)
+            }
         }
     }
 }
